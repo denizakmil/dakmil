@@ -5,104 +5,72 @@
 
 
 
-- **TC-001 Multipos Satış**
-   + **Step 1:** Multipos ekranı açılır ve giriş yapılır.
-      - [x] **Result:** : Başarılı giriş yapılığı gözlemlenir.
-   + **Step 2:** Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.
-     - [X] **Result:** :  İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör
-   + **Step 3:** Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır.
-     - [x] **Result:** :  ekranda CVV alanının açıldığını gör.
-    + **Step 4:** CVV bilgisini başarılı şekilde girilir.
-      - [x] **Result:** :  Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör.
-    + **Step 5:** Onay sayfasında tutar bilgisinin dogrulugunu ,SMS in göderileceği telefon numarasını , Tekrar gönder butonunun çalıştığını kontrol et.
-      - [x] **Result:** :  Telefon numarasının maskeli olan numaraya geldiğini gör.
-İlk başta girilen tutar ile aynı oldugunu gör.
-Tekrar gönder butonuna basıp SMS tekrar geldiğini gör.
+**1. Kullanıcı Kaydı Oluştur(Register OTP)**
+===========
+  >**Precondition** :  Register olan kullanıcının otp bilgisi gelmiş olması
+ ---------
+   + **Step 1:** Eksiksiz ve doğru bilgiler girildiğinde kullanıcı aktiflenir.
+      - [x] **Result:** : 
+        1. Wall-e'de aktif kullanıcı ve aktif cüzdan oluşur.
+        2. OPY'de hesap bilgisi oluşur.(Aktif)
+        3. Zaten oluştu. Paranteze gitmiyor tekrar. Düzenlenmesi gerek.
+        4. Kullanıcı walvent ve opy de login olur.
 
+**2. Giriş yapar(Login)**
+===========
+  >**Precondition** : Login olmamış kullanıcı
 
-- **TC-002 Self servis**
-   + **Step 1:** Multipos ekranı açılır ve giriş yapılır.
-      - [x] **Result:** : Başarılı giriş yapılığı gözlemlenir.
-   + **Step 2:** Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.
-     - [X] **Result:** :  İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör
-   + **Step 3:** Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır.
-     - [x] **Result:** :  ekranda CVV alanının açıldığını gör.
-    + **Step 4:** CVV bilgisini başarılı şekilde girilir.
-      - [x] **Result:** :  Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör.
-    + **Step 5:** Onay sayfasında tutar bilgisinin dogrulugunu ,SMS in göderileceği telefon numarasını , Tekrar gönder butonunun çalıştığını kontrol et.
-      - [x] **Result:** :  Telefon numarasının maskeli olan numaraya geldiğini gör.
-İlk başta girilen tutar ile aynı oldugunu gör.
-Tekrar gönder butonuna basıp SMS tekrar geldiğini gör.
+ ---------
+   + **Step 1:** Eksiksiz ve doğru bilgiler girildiğinde kullanıcıya otp gönderilir.
+
+      - [x] **Result:** :
+        1. Wall-e'de kullanıcı henüz login olmaz.
+        2. OPY'de kullanıcı henüz login olmaz.
 
 
 
-**TC-001 Multipos Satış**
+
+
+
+**Kullanıcı Kaydı Oluştur(Register OTP)**
 =======
 | Steps   |      Test Name      |  Result |
-|---------|:-------------:|------:|
-| Step 1 |  Multipos ekranı açılır ve giriş yapılır. | Başarılı giriş yapılığı gözlemlenir.|
-| Step 2 |    Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.   |   İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör |
-| Step 3 | Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır. |    ekranda CVV alanının açıldığını gör. |
-| Step 4 | CVV bilgisini başarılı şekilde girilir. |    Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör. |
-**TC-002 Multipos Satış**
+|---------|:-------------:|:------:|
+| Step 1 |  Eksiksiz ve doğru bilgiler girildiğinde kullanıcı aktiflenir. | 1. Wall-e'de aktif kullanıcı ve aktif cüzdan oluşur.2. OPY'de hesap bilgisi oluşur.(Aktif)3. Zaten oluştu. Paranteze gitmiyor tekrar. Düzenlenmesi gerek.4. Kullanıcı walvent ve opy de login olur.
+
+
+ 
+ 
+ 
+
+
+
+**TC-003 Login olmamış kullanıcı Giriş yapar(Login)**
  =======
-| Steps   |      Test Name      |  Result |
-|---------|:-------------:|------:|
-|  1 |  Multipos ekranı açılır ve giriş yapılır. | Başarılı giriş yapılığı gözlemlenir.|
-|  2 |    Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.   |   İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör |
-|  3 | Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır. |    ekranda CVV alanının açıldığını gör. |
-|  4 | CVV bilgisini başarılı şekilde girilir. |    Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör. |
-
-
-
-**TC-003 Multipos Satış**
- =======
- <font color='red'>1.Multipos ekranı açılır ve giriş yapılır.</font>
+ <font color='red'>Eksiksiz ve doğru bilgiler girildiğinde kullanıcı aktiflenir.</font>
   ------
- * [x] Başarılı giriş yapılığı gözlemlenir.
-
-<font color='red'>2.Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.</font>
- ------
-  * [x] İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör.
+    1. Wall-e'de kullanıcı henüz login olmaz.
+    2. OPY'de kullanıcı henüz login olmaz.
+ 
 
 
-<font color='red'>3.Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır.</font>
-------
-  * [x] ekranda CVV alanının açıldığını gör.
+**TC-004 Login için otp bilgisi gelmiş olması Giriş yapar(Login OTP)**
+ -------
+ **Step 1 :**
+    
+    Eksiksiz ve doğru bilgiler girildiğinde kullanıcı sisteme login olur.
+  
+ **Results :**
+
+        1. Wall-e'de aktif kullanıcı ve aktif cüzdan oluşur.
+        2. OPY'de hesap bilgisi oluşur.(Aktif)
+        3. Zaten oluştu. Paranteze gitmiyor tekrar. Düzenlenmesi gerek.
+        4. Kullanıcı walvent ve opy de login olur.
 
 
-<font color='red'>4.CVV bilgisini başarılı şekilde girilir.</font>
----------------
-- [x] Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör.
-
-
-**TC-004 Multipos Satış**
- =======
- 1.Multipos ekranı açılır ve giriş yapılır.
- ------
- * [x] Başarılı giriş yapılığı gözlemlenir.
-
-2.Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.
- ------
-  * [x] İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör.
-
-3.Multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır.
-------
-  * [x] ekranda CVV alanının açıldığını gör.
-
-4.CVV bilgisini başarılı şekilde girilir.	
----------------
-- [x] Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör.
-
-| Subject            | Senaryo Tipi | Status | Type   | Severity | Test Name                  | Description                | Step Name (Design Steps) | Description (Design Steps)                                                                                                             | Expected (Design Steps)                                                                                                                                                |
-| ------------------ | ------------ | ------ | ------ | -------- | -------------------------- | -------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Brocode\3d payment | Functional   | PASS   | MANUAL | 2.High   | TC-001 Multipos satış (3D) | TC-001 Multipos satış (3D) | Step 1                   | Multipos ekranı açılır ve giriş yapılır.                                                                                               | başarılı giriş yapıldığını gör.                                                                                                                                        |
-| Brocode\3d payment | Functional   | PASS   | MANUAL | 2.High   | TC-001 Multipos satış (3D) | TC-001 Multipos satış (3D) | Step 2                   | Açılan ekranda App token , MerchantID , TerminalId , transferClientRequestRefNo , MerchantProductId ve Amount girilir.                 | İlgili alanları doldurup ürün ekleye bas, kart ekranının açıldığını gör                                                                                                |
-| Brocode\3d payment | Functional   | PASS   | MANUAL | 2.High   | TC-001 Multipos satış (3D) | TC-001 Multipos satış (3D) | Step 3                   | multinet kart numarasını başarılı şekilde doldur ve devam et butonuna basılır.                                                         | ekranda CVV alanının açıldığını gör                                                                                                                                    |
-| Brocode\3d payment | Functional   | PASS   | MANUAL | 2.High   | TC-001 Multipos satış (3D) | TC-001 Multipos satış (3D) | Step 4                   | CVV bilgisini başarılı şekilde girilir.                                                                                                | Telefon onay sayfası açılır ve devam et butonuna basılır. Onay sayfasının açıldığını gör.                                                                              |
-| Brocode\3d payment | Functional   | PASS   | MANUAL | 2.High   | TC-001 Multipos satış (3D) | TC-001 Multipos satış (3D) | Step 5                   | Onay sayfasında tutar bilgisinin dogrulugunu ,SMS in göderileceği telefon numarasını , Tekrar gönder butonunun çalıştığını kontrol et. | Telefon numarasının maskeli olan numaraya geldiğini gör.<br/>İlk başta girilen tutar ile aynı oldugunu gör.<br/>Tekrar gönder butonuna basıp SMS tekrar geldiğini gör. |
-
-
+ 
+ | WTC-0001 | Walvent | 1- Register olan kullanıcının otp bilgisi gelmiş olması | Kullanıcı Kaydı Oluştur(Register OTP) | Eksiksiz ve doğru bilgiler girildiğinde kullanıcı aktiflenir. | 1. Wall-e'de aktif kullanıcı ve aktif cüzdan oluşur.<br/>2. OPY'de hesap bilgisi oluşur.(Aktif)<br/>3. Zaten oluştu. Paranteze gitmiyor tekrar. Düzenlenmesi gerek.<br/>4. Kullanıcı walvent ve opy de login olur.<br/><br/><br/> | https://api.walvent.com/ | https://api.walvent.com/ |
+|----------|---------|---------------------------------------------------------|---------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|--------------------------|
 
     
 		
